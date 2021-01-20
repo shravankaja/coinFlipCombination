@@ -1,4 +1,4 @@
-#! /bin/bash 
+#! /bin/bash -x
 function coinFlip() {
 temp=$1
 hwin=0
@@ -19,6 +19,13 @@ else
 	arr[i]=$twin
 fi
 done
+echo $hwin
+x=$(($hwin/$temp))
+Hpercentage=$(( $x * 100 ))
+echo $Hpercentage
+echo $twin
+y=$(($twin/$temp))
+Tpercentage=$(( $y * 100 ))
 for KEY in "${!arr[@]}"; 
 do
 	echo $KEY
